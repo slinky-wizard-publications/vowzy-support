@@ -158,17 +158,23 @@ footer a {
   margin: 0 8px;
 }
 
-.page-icon {
-  width: 82px;
-  height: 82px;
-  display: block;
-  margin: 0 auto 18px;
-  border-radius: 20px;
-  box-shadow: 0 14px 30px rgba(31, 92, 50, .14);
+.page-title-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
 }
 
-.card h1 {
-  text-align: center;
+.page-title-logo {
+  width: 86px;
+  max-width: 86px;
+  height: auto;
+  flex: 0 0 auto;
+}
+
+.page-title-row h1 {
+  margin: 0;
+  text-align: left;
 }
 
 @media (max-width: 760px) {
@@ -188,5 +194,21 @@ footer a {
 
   .screenshot-card {
     max-width: 280px;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-title-row {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .page-title-logo {
+    width: 64px;
+    max-width: 64px;
+  }
+
+  .page-title-row h1 {
+    font-size: 2rem;
   }
 }
