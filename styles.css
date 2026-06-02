@@ -198,14 +198,21 @@ footer a {
 }
 
 @media (max-width: 520px) {
-  .page-title-row {
-    align-items: flex-start;
-    gap: 12px;
+  .page-title-icon {
+    width: 72px;
+    height: 72px;
+    max-width: 72px;
+    flex: 0 0 auto;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(31, 92, 50, .14);
   }
 
-  .page-title-logo {
-    width: 64px;
-    max-width: 64px;
+  .page-title-icon {
+    width: 58px;
+    height: 58px;
+    max-width: 58px;
+    border-radius: 14px;
   }
 
   .page-title-row h1 {
