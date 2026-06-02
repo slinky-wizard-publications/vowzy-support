@@ -88,9 +88,10 @@ a {
 
 .screenshots {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
   margin-top: 38px;
+  align-items: start;
 }
 
 .screenshot-card {
@@ -98,13 +99,20 @@ a {
   border: 1px solid var(--line);
   border-radius: 28px;
   padding: 14px;
+  max-width: 260px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .screenshot-card img {
   width: 100%;
+  aspect-ratio: 9 / 19.5;
+  object-fit: cover;
+  object-position: top center;
   border-radius: 22px;
   display: block;
   background: #dff5dd;
+  box-shadow: 0 16px 36px rgba(31, 92, 50, .12);
 }
 
 .features {
@@ -163,5 +171,9 @@ footer a {
   .screenshots,
   .features {
     grid-template-columns: 1fr;
+  }
+
+  .screenshot-card {
+    max-width: 280px;
   }
 }
