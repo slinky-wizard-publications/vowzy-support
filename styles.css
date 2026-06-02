@@ -165,11 +165,14 @@ footer a {
   margin-bottom: 24px;
 }
 
-.page-title-logo {
-  width: 86px;
-  max-width: 86px;
-  height: auto;
+.page-title-icon {
+  width: 72px;
+  height: 72px;
+  max-width: 72px;
   flex: 0 0 auto;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(31, 92, 50, .14);
 }
 
 .page-title-row h1 {
@@ -198,14 +201,9 @@ footer a {
 }
 
 @media (max-width: 520px) {
-  .page-title-icon {
-    width: 72px;
-    height: 72px;
-    max-width: 72px;
-    flex: 0 0 auto;
-    object-fit: cover;
-    border-radius: 18px;
-    box-shadow: 0 12px 28px rgba(31, 92, 50, .14);
+  .page-title-row {
+    align-items: flex-start;
+    gap: 12px;
   }
 
   .page-title-icon {
