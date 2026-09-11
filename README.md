@@ -8,3 +8,4 @@ Pages:
 - Support
 - Privacy Policy
 - App information
+- Guided habits and premium journeys
