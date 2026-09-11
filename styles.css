@@ -74,6 +74,11 @@ a {
   font-size: 1.2rem;
 }
 
+.lead.left {
+  margin-left: 0;
+  text-align: left;
+}
+
 .button {
   display: inline-block;
   margin: 10px 8px;
@@ -127,16 +132,136 @@ a {
   text-align: left;
 }
 
-.feature {
+.feature,
+.mini-card,
+.journey-card {
   background: rgba(255, 255, 255, .72);
   border: 1px solid var(--line);
   border-radius: 22px;
   padding: 20px;
 }
 
-.feature h3 {
+.feature h3,
+.mini-card h3,
+.journey-card h3 {
   margin-top: 0;
   margin-bottom: 8px;
+}
+
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0 8px;
+}
+
+.page-nav a,
+.pill {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  display: inline-block;
+  font-size: .88rem;
+  font-weight: 800;
+  line-height: 1.2;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.page-nav a {
+  background: #f7fff4;
+}
+
+.habit-grid,
+.journey-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.habit-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.journey-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mini-card,
+.journey-card {
+  text-align: left;
+}
+
+.mini-card p,
+.journey-card p {
+  margin-bottom: 0;
+}
+
+.journey-card ul {
+  margin: 16px 0 0;
+  padding-left: 20px;
+}
+
+.journey-card li {
+  margin: 6px 0;
+}
+
+.journey-card.premium {
+  background: linear-gradient(180deg, #ffffff, #f6fffb);
+}
+
+.journey-media {
+  align-items: end;
+  background: #eefbea;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 14px;
+  margin: 0 0 18px;
+  overflow: hidden;
+  padding: 14px 14px 0;
+}
+
+.journey-logo {
+  align-self: start;
+  aspect-ratio: 1;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(31, 92, 50, .14);
+  display: block;
+  object-fit: cover;
+  width: 72px;
+}
+
+.journey-screenshot {
+  aspect-ratio: 9 / 19.5;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 14px 32px rgba(31, 92, 50, .14);
+  display: block;
+  justify-self: end;
+  max-height: 210px;
+  object-fit: cover;
+  object-position: top center;
+  width: min(100%, 104px);
+}
+
+.pill {
+  background: var(--teal);
+  margin-bottom: 14px;
+}
+
+.pill.premium {
+  background: #e8f8d6;
+}
+
+.eyebrow {
+  color: var(--soft);
+  display: block;
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .muted,
@@ -198,7 +323,9 @@ footer a {
   }
 
   .screenshots,
-  .features {
+  .features,
+  .habit-grid,
+  .journey-grid {
     grid-template-columns: 1fr;
   }
 
