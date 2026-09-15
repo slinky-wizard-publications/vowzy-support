@@ -173,7 +173,8 @@ a {
 }
 
 .habit-grid,
-.journey-grid {
+.journey-grid,
+.topic-grid {
   display: grid;
   gap: 16px;
   margin-top: 24px;
@@ -185,6 +186,10 @@ a {
 
 .journey-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.topic-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .mini-card,
@@ -325,7 +330,8 @@ footer a {
   .screenshots,
   .features,
   .habit-grid,
-  .journey-grid {
+  .journey-grid,
+  .topic-grid {
     grid-template-columns: 1fr;
   }
 
